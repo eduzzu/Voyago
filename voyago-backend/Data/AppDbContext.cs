@@ -43,18 +43,22 @@ namespace Voyago_Backend.Data
                 .HasForeignKey(t => t.UserId);
 
             modelBuilder.Entity<Driver>()
-                .HasMany(driver => driver.Trips)
-                .WithOne(trip => trip.Driver.Driver)
-                .HasForeignKey(trip => trip.DriverId);
-
-            modelBuilder.Entity<Driver>()
                 .HasOne(driver => driver.Company)
                 .WithMany(company => company.Drivers)
                 .HasForeignKey(driver => driver.CompanyId);
 
             modelBuilder.Entity<User>()
-                .HasMany(user => user.Trips)
-                .WithMany(trip => trip.UsersTrip);
+                .HasMany(user => user.UserTrips)
+                .WithMany(trip => trip.UserTrips);
+                
+            modelBuilder.Entity<User>(entity =>
+    {
+
+        entity.Property<string>("HashedPassword")
+              .HasColumnName("HashedPassword")
+              .IsRequired();
+
+    });
         }
 
 

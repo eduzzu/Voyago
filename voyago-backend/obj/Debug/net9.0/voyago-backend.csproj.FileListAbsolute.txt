@@ -7,6 +7,7 @@ D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\voyago-backend.runtimeconfig.
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\voyago-backend.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\voyago-backend.pdb
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Humanizer.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.Build.Locator.dll
@@ -30,6 +31,12 @@ D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.Extensions.Logging.
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Mono.TextTemplating.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\Npgsql.dll
@@ -40,6 +47,7 @@ D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\System.Composition.Convention
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\System.Composition.Hosting.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\System.Composition.Runtime.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\System.Composition.TypedParts.dll
+D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\Projects\Voyago\voyago-backend\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -113,6 +121,7 @@ D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\voyago-backend.AssemblyInfo.c
 D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\voyago-backend.csproj.CoreCompileInputs.cache
 D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\voyago-backend.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\voyago-backend.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\voyago-backend.sourcelink.json
 D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\rjimswa.dswa.cache.json
 D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 D:\Projects\Voyago\voyago-backend\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

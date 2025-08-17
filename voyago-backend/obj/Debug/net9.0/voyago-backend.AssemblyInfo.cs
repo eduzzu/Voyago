@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("voyago-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30085964fc841001477865aa99da07866588ff67")]
 [assembly: System.Reflection.AssemblyProductAttribute("voyago-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("voyago-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
