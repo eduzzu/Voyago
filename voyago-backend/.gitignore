@@ -1,1 +1,7 @@
 appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+*.user
+bin/
+obj/
+.vs/

@@ -62,10 +62,9 @@ namespace Voyago_Backend.Services
             return await CreateTokenResponse(user);
         }
 
-        public async Task<bool> SendResetPasswordEmail(string email)
+         public async Task<bool> SendResetPasswordEmail(string email)
         {
             var user = await appDbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
-            Console.WriteLine(user);
             if (user == null)
                 return false;
 
@@ -74,8 +73,8 @@ namespace Voyago_Backend.Services
 
             await appDbContext.SaveChangesAsync();
 
-           var resetLink = $"http://localhost:5243/auth/reset-password?token={user.ResetPasswordToken}";
-           var emailBody = $"Click <a href='{resetLink}'>here</a> to change your password. This link expires in an hour.";
+           var resetLink = $"http://localhost:5001/auth/reset-password?token={user.ResetPasswordToken}";
+           var emailBody = $"Click <a href='{resetLink}'>here</a> to change your password. This link expires in an hour. Do not share this link with anyone.";
            
             await emailService.SendEmail(user.Email, "Reset Password", emailBody);
 
@@ -98,7 +97,6 @@ namespace Voyago_Backend.Services
 
             return true;
         }
-
         public async Task<User?> Register(RegisterDto request)
         {
             if (await appDbContext.Users.AnyAsync(user => user.Email == request.Email))
