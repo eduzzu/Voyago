@@ -22,8 +22,7 @@ namespace Voyago_Backend.Models
         public DateOnly DateOfBirth { get; set; }
         public string PhoneNumber { get; set; } = string.Empty;
         public string ProfilePicture { get; set; } = string.Empty;
-        public Driver? Driver { get; set; }
-        public Owner? Owner { get; set; }
+        
         public ICollection<Ticket>? Tickets { get; set; } = new List<Ticket>();
         public ICollection<Trip>? UserTrips { get; set; } = new List<Trip>();
 

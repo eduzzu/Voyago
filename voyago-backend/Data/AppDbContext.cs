@@ -17,25 +17,10 @@ namespace Voyago_Backend.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<User>()
-                .HasOne(user => user.Driver)
-                .WithOne(driver => driver.User)
-                .HasForeignKey<Driver>(driver => driver.UserId);
-
             modelBuilder.Entity<Owner>()
                 .HasMany(owner => owner.Companies)
                 .WithOne(company => company.Owner)
                 .HasForeignKey(company => company.OwnerId);
-
-            modelBuilder.Entity<User>()
-                .HasOne(user => user.Driver)
-                .WithOne(driver => driver.User)
-                .HasForeignKey<Driver>(driver => driver.UserId);
-
-            modelBuilder.Entity<User>()
-                .HasOne(user => user.Owner)
-                .WithOne(owner => owner.User)
-                .HasForeignKey<Owner>(owner => owner.UserId);
 
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Tickets)
