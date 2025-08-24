@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Voyago_Backend.Data;
 using Voyago_Backend.Models;
 using Voyago_Backend.Services;
+using VoyagoBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,11 +29,14 @@ builder.Services.AddCors(options =>
     });
 });
 
+
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<TokenGeneratorService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.Configure<JsonOptions>(options =>
 {
     options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;

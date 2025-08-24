@@ -8,6 +8,7 @@ namespace Voyago_Backend.Data
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Driver> Drivers { get; set; } = null!;
         public DbSet<Owner> Owners { get; set; } = null!;
+        public DbSet<Admin> Admins { get; set; } = null!;
         public DbSet<Car> Cars { get; set; } = null!;
         public DbSet<Trip> Trips { get; set; } = null!;
         public DbSet<Ticket> Tickets { get; set; } = null!;

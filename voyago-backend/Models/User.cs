@@ -23,8 +23,8 @@ namespace Voyago_Backend.Models
         public string PhoneNumber { get; set; } = string.Empty;
         public string ProfilePicture { get; set; } = string.Empty;
         
-        public ICollection<Ticket>? Tickets { get; set; } = new List<Ticket>();
-        public ICollection<Trip>? UserTrips { get; set; } = new List<Trip>();
+        public ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
+        public ICollection<Trip> UserTrips { get; set; } = new List<Trip>();
 
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }

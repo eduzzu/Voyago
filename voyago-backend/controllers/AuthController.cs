@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Voyago_Backend.Models;
 using Voyago_Backend.Services;
 
-[ApiController]
+namespace Voyago_Backend.Controllers
+{
+   [ApiController]
 [Route("[controller]")]
 public class AuthController(IAuthService authService) : ControllerBase
 {
@@ -53,4 +55,5 @@ public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest r
     return Ok(new { message = "Password was changed successfully." });
 }
 
+} 
 }

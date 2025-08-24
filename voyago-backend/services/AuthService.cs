@@ -19,14 +19,14 @@ namespace Voyago_Backend.Services
             return await CreateTokenResponse(user);
         }
 
-         private async Task<TokenResponse> CreateTokenResponse(User user)
-    {
-        return new TokenResponse
+        private async Task<TokenResponse> CreateTokenResponse(User user)
         {
-            AccessToken = tokenGeneratorService.GenerateToken(user.UserId, user.Email),
-            RefreshToken = await GenerateAndSaveRefreshToken(user)
-        };
-    }
+            return new TokenResponse
+            {
+                AccessToken = tokenGeneratorService.GenerateToken(user.UserId, user.Email),
+                RefreshToken = await GenerateAndSaveRefreshToken(user)
+            };
+        }
         private string GenerateRefreshToken()
         {
             var randomNumber = new byte[32];
@@ -62,7 +62,7 @@ namespace Voyago_Backend.Services
             return await CreateTokenResponse(user);
         }
 
-         public async Task<bool> SendResetPasswordEmail(string email)
+        public async Task<bool> SendResetPasswordEmail(string email)
         {
             var user = await appDbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null)
@@ -73,9 +73,9 @@ namespace Voyago_Backend.Services
 
             await appDbContext.SaveChangesAsync();
 
-           var resetLink = $"http://localhost:5001/auth/reset-password?token={user.ResetPasswordToken}";
-           var emailBody = $"Click <a href='{resetLink}'>here</a> to change your password. This link expires in an hour. Do not share this link with anyone.";
-           
+            var resetLink = $"http://localhost:5001/auth/reset-password?token={user.ResetPasswordToken}";
+            var emailBody = $"Click <a href='{resetLink}'>here</a> to change your password. This link expires in an hour. Do not share this link with anyone.";
+
             await emailService.SendEmail(user.Email, "Reset Password", emailBody);
 
             return true;
@@ -103,7 +103,8 @@ namespace Voyago_Backend.Services
             {
                 return null;
             }
-            var newUser = new User();
+            User newUser;
+
             if (request.AccountType == "Owner")
             {
                 newUser = new Owner();
@@ -111,6 +112,14 @@ namespace Voyago_Backend.Services
             else if (request.AccountType == "Driver")
             {
                 newUser = new Driver();
+            }
+            else if (request.AccountType == "Admin")
+            {
+                newUser = new Admin();
+            }
+            else
+            {
+                newUser = new User();
             }
 
             newUser.FirstName = request.FirstName;
