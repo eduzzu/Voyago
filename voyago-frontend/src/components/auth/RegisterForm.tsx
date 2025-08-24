@@ -3,6 +3,7 @@ import type { IRegisterForm } from "../../interfaces/IRegisterForm";
 import { useNavigate } from "react-router-dom";
 import { registerSchema } from "../../schemas/RegisterSchema";
 import { useState } from "react";
+import FormHeader from "./FormHeader";
 
 export default function RegisterForm() {
   const navigate = useNavigate();
@@ -79,15 +80,7 @@ export default function RegisterForm() {
             onSubmit={handleSubmit}
             className="grid w-full grid-cols-1 gap-4"
           >
-            <div className="flex justify-center items-center gap-1">
-              <img
-                src="/src/assets/voyago.png"
-                height="50%"
-                className="rounded-full border-1 border-gray-300"
-              />
-              <h1 className="text-center text-xl">Voyago</h1>
-            </div>
-            <h1 className="text-center text-xl">Create your account</h1>
+            <FormHeader headerH1="Create your account" />
             <fieldset>
               <input
                 className="w-full p-2 border-2 border-gray-300 rounded-2xl outline-red-700"

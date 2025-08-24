@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../state/hooks";
 import { setLogin } from "../../state/slices/authSlice";
 import { loginSchema } from "../../schemas/LoginSchema";
 import { useState } from "react";
+import FormHeader from "./FormHeader";
 
 export default function LoginForm() {
   const dispatch = useAppDispatch();
@@ -81,15 +82,7 @@ export default function LoginForm() {
             onSubmit={handleSubmit}
             className="grid w-full grid-cols-1 gap-6"
           >
-            <div className="flex justify-center items-center gap-1">
-              <img
-                src="/src/assets/voyago.png"
-                height="50%"
-                className="rounded-full border-1 border-gray-300"
-              />
-              <h1 className="text-center text-xl">Voyago</h1>
-            </div>
-            <h1 className="text-center text-xl">Sign in to your account</h1>
+          <FormHeader headerH1="Sign in to your account" />
             <fieldset>
               <input
                 className="w-full p-2 border-2 border-gray-300 rounded-2xl outline-red-700"

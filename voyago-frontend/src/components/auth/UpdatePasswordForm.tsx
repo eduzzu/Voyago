@@ -2,6 +2,7 @@ import { Formik, type FormikHelpers } from "formik";
 import { updatePasswordSchema } from "../../schemas/ResetPasswordSchema";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import FormHeader from "./FormHeader";
 
 
 export default function UpdatePasswordForm() {
@@ -58,15 +59,7 @@ export default function UpdatePasswordForm() {
             onSubmit={handleSubmit}
             className="grid w-full grid-cols-1 gap-6"
           >
-            <div className="flex justify-center items-center gap-1">
-              <img
-                src="/src/assets/voyago.png"
-                height="50%"
-                className="rounded-full border-1 border-gray-300"
-              />
-              <h1 className="text-center text-xl">Voyago</h1>
-            </div>
-            <h1 className="text-center text-xl">Enter your new password</h1>
+            <FormHeader headerH1="Enter your new password" />
             <fieldset>
               <div className="relative">
                 <input
